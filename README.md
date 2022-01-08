@@ -10,5 +10,10 @@
     - <a href="./web1_html_internet-master/01">01. 대략적인 개요</a>
     - <a href="./web1_html_internet-master/02">02. queryData.id</a>
       - 이를 통한 title을 동적으로 바꾸기
-    - <a href="./web1_html_internet-master/02">03. fs.readFile</a>
+    - <a href="./web1_html_internet-master/03">03. 파일 읽기</a>
+      - fs.readFile
       - 파일 읽기를 통해 다이나믹하게 웹페이지 구성
+    - <a href="./web1_html_internet-master/04">04. 오류 페이지 만들기</a>
+      - url.parse(_url, true).pathname
+      - undefined
+
