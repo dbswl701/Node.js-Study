@@ -64,3 +64,34 @@ filelist.length를 통해 data 디렉토리 안의 파일 갯수를 알아와 �
 위와 같은 방법을 통해 파일의 list 정보를 담을 수 있다.
 
 📌이같은 방버븐 파일이 추가되면 알아서 작동하기에 더이상 코드를 열어서 내용을 수정하지 않아도 된다!
+
+---
+
+지금까지의 내용을 함수를 사용하여 유지보수를 더욱 용이하게 만들어보자.
+var template의 내용을 function을 사용하여 지정하였다.
+
+```js
+function templateHTML(){
+  return `
+  <!doctype html>
+  <html>
+  <head>
+    <title>WEB1 - ${title}</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1><a href="/">WEB</a></h1>
+    ${list}
+    ${body}
+  </body>
+  </html>
+  `;
+}
+
+```
+
+<h2>${title}</h2>
+<p>${description}</p>
+
+이부분은 page의 형태에 따라서 달라질 수 있으므로 ${body}로 묶어 argument를 `<h2>... `이렇게 준다.
+
