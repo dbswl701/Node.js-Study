@@ -90,8 +90,9 @@ function templateHTML(){
 
 ```
 
+```js
 <h2>${title}</h2>
 <p>${description}</p>
-
+```
 이부분은 page의 형태에 따라서 달라질 수 있으므로 ${body}로 묶어 argument를 `<h2>... `이렇게 준다.
 
