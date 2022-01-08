@@ -16,4 +16,9 @@
     - <a href="./web1_html_internet-master/04">04. 오류 페이지 만들기</a>
       - url.parse(_url, true).pathname
       - undefined
+    - <a href="./web1_html_internet-master/05">05. 디렉토리에 파일 추가 삭제 알기</a>
+      - fs.readdir()
+      - 데이터 추가 시 처리
+      - list에 문자열 추가하여 <li> 추가
+
 
