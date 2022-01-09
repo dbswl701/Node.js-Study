@@ -28,5 +28,12 @@
     - pm2
     - 에러 해결
     - 설치, 시작, 모니터링 등등
+  - <a href="./web1_html_internet-master/08">08. HTML form</a>
+    - 글쓰기 화면
+      - `<input type="~~">`
+    - 입력 정보 전달 방식
+      - url에 보이게 vs 보이지 않게
+      - method="post"
+    - placeholder=""
 
 
