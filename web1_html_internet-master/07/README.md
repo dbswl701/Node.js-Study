@@ -17,7 +17,7 @@ package manager는 그러한 sw를 관리해주는,(create, install, update, del
 지금까지는 코드를 수정하면 node.js를 껐다 다시 실행시켜야지만 변경된 내용이 반영이 됐는데 pm2가 파일이 수정되는지를 관찰하고 있다가 파일이 수정되면 자동으로 프로그램을 껐다 다시 켜서 수정할 떄 마다 껐다 키는 불편함을 제거해준다.
 
 -> npm을 이용해 pm2를 설치하여 사용해보자!
-
+---
 - 설치 방법
 ```
 npm install pm2 -g
@@ -26,15 +26,14 @@ npm install pm2 -g
 
 
 **여기서 문제 발생**
+
 pm2가 잘 설치됐는지 확인해보았는데 다음과 같은 에러메시지가 출력되었다.
 <img src="./error.png">
 
 이는 window 실행환경에서 스크립트 실행권환이 제한되어 있는 상태이기 때문이다.
 이 문제는 아래의 주소의 내용을 따라하여 해결하였다.
 https://singa-korean.tistory.com/21
-
 ---
-
 - 실행방법
 ```js
 pm2 start main.js
@@ -47,9 +46,7 @@ status가 online : 지금 실행중
 cpu와 memory도 지금 얼마나 소비하고 있는지도 화면에 보여준다.
 
 이 상태가 지금 main.js가 실행 된 상태이다.
-
 ---
-
 - monitoring
 ```js
 pm2 monit
@@ -58,14 +55,13 @@ pm2 monit
 현재 실행되고 있는 pm2에 의해 실행되고 있는 프로그램들이 보인다.
 
 이 화면에서 나가고 싶으면 **q** 입력
-
 ---
-
 - 현재 실행중인 프로세스의 list 확인
 ```js
 pm2 list
 ```
 <img src="pm2_list.png">
+
 ---
 
 - 프로그램 종료
