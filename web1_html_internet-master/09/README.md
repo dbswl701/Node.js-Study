@@ -1,6 +1,6 @@
-### post 방식으로 전송된 data를 nodejs안에서 가져오기 위한 방법
+## post 방식으로 전송된 data를 nodejs안에서 가져오기 위한 방법
 
-nodejs post data
+- nodejs post data
 ```js
 http.createServer(function(request, response){})
 ```
@@ -62,3 +62,47 @@ var description = post.description;
 
 다음시간 : 이렇게 받아낸 정보를 어떻게 처리 할 것인가.
 
+---
+
+## post 방식으로 전송된 data를 data디렉토리 안에 파일의 형태로 저장하는 방법
+
+- nodejs file write
+
+```js
+fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+  response.writeHead(200);
+  response.end('Sucess');
+});
+```
+- callback이 실행된다 = 파일의 저장이 끝났다.
+- 파일의 저장이 끝난 다음에 success를 해줘야 한다. 
+
+=> 여기까지 진행했으면 data 폴더 안에 title로 작성한 이름으로 파일이 하나 생성된다.
+
+---
+
+### redirection
+- 정보를 입력했는데 페이지에 sucess만 뜨면 사용자 입장에서는 어리둥절
+- 사용자를 생성한 파일을 보는 view 페이지로 보내고 싶다!
+
+http://localhost:3000/create_process
+이 페이지에서 
+http://localhost:3000/?id=Nodejs
+이 페이지로 사용자를 보내버리면 사용자가 글을 쓰고 자기가 쓴 글이 잘 전송됐는지 확인하는 것 까지를 한방에 할 수 있는 아주 편리한 기능을 구현할 것!
+
+사용자가 어떤 page(http://localhost:3000/create_process
+)로 와서 어떤 처리를 한 다음에 다시 사용자를 다른 page로 튕겨버리는 것을 **redirection**이라고 한다.
+
+301: 이 주소는 아래 경로로 영원히 바뀌었으니 여기로 계속 와라
+302: page를 일시적으로(?) 다른곳으로 redirection 시킨다.
+
+
+```js
+fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+  response.writeHead(302, {Location: `/?id=${title}`});
+  response.end('Sucess');
+});
+```
+위와 같이 작성하면, Location에 있는 주소로 redirection이 된다.
+
+우리는 지금까지 사용자가 입력한 정보를 받아서 다이나믹하게 프로그래밍 적으로 data directory에 파일을 생성하는 방법을 살펴보았다!

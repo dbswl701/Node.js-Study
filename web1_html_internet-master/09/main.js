@@ -88,10 +88,12 @@ var app = http.createServer(function(request,response){
         var title = post.title;
         var description = post.description;
         console.log(post.title);
-
+        fs.writeFile(`data/${title}`, description, 'utf8', function(err){
+          response.writeHead(302, {Location: `/?id=${title}`});
+          response.end('Sucess');
+        });
       });
-      response.writeHead(200);
-      response.end('Sucess');
+
     }
     else {
       response.writeHead(404);

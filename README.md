@@ -35,6 +35,17 @@
       - url에 보이게 vs 보이지 않게
       - method="post"
     - placeholder=""
-  - <a href="./web1_html_internet-master/09">08. Post방식으로 전송된 data 받기</a>
-    - 
+  - <a href="./web1_html_internet-master/09">09. Post방식</a>
+    - post 방식으로 전송된 data를 nodejs안에서 가져오기 위한 방법
+      - http.createServer(function(request, response){})
+      - request.on('data', function(data){})
+      - request.on('end', function(){})
+      - var qs = require('querystring');
+    - post 방식으로 전송된 data를 data디렉토리 안에 파일의 형태로 저장하는 방법
+      - fs.writeFile(){}
+      - redirection
+      - response.writeHead(302, {Location: `/?id=${title}`});
+
+
+
 
