@@ -33,7 +33,7 @@ npm install pm2 -g
 **여기서 문제 발생**
 
 pm2가 잘 설치됐는지 확인해보았는데 다음과 같은 에러메시지가 출력되었다.
-<img src="./error.png">
+<img src="./img/error.png">
 
 이는 window 실행환경에서 스크립트 실행권환이 제한되어 있는 상태이기 때문이다.
 이 문제는 아래의 주소의 내용을 따라하여 해결하였다.
@@ -45,7 +45,7 @@ https://singa-korean.tistory.com/21
 ```js
 pm2 start main.js
 ```
-<img src="pm2_start.png">
+<img src="img/pm2_start.png">
 두번째 행의 main이란 지금 실행시킨 main.js의 별명
 
 status가 online : 지금 실행중 
@@ -60,7 +60,7 @@ cpu와 memory도 지금 얼마나 소비하고 있는지도 화면에 보여준�
 ```js
 pm2 monit
 ```
-<img src="pm2_monit.png">
+<img src="img/pm2_monit.png">
 현재 실행되고 있는 pm2에 의해 실행되고 있는 프로그램들이 보인다.
 
 이 화면에서 나가고 싶으면 **q** 입력
@@ -69,7 +69,7 @@ pm2 monit
 ```js
 pm2 list
 ```
-<img src="pm2_list.png">
+<img src="img/pm2_list.png">
 
 ---
 
@@ -79,7 +79,7 @@ pm2 list를 통해 목록을 본 다음 종료하고 싶은 프로세스의 이�
 ```js
 pm2 stop main
 ```
-<img src="pm2_stop.png">
+<img src="img/pm2_stop.png">
 이렇게 main이 꺼지면서 stoped라고 status가 변경되는 것을 확인할 수 있다.
 
 ---
