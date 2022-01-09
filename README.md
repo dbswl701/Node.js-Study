@@ -45,6 +45,12 @@
       - fs.writeFile(){}
       - redirection
       - response.writeHead(302, {Location: `/?id=${title}`});
+  - <a href="./web1_html_internet-master/10">09. Update</a>
+    - 글수정-수정 링크 생성
+    - 글수정-수정할 정보 전송
+    - 글수정-파일명 변경, 내용 저장
+      - rename
+      - fs.writefile()
 
 
 
