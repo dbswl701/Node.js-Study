@@ -21,10 +21,10 @@
     - 데이터 추가 시 처리
     - list에 문자열 추가하여 '<li>'추가
     - 함수로 중복된 부분 묶음
-  - <a href="./web1_html_internet-master/06">05. 비동기와 callback</a>
+  - <a href="./web1_html_internet-master/06">06. 비동기와 callback</a>
     - readFileSync(fs.readFileSync) vs readFile(fs.readFile)
     - callback함수
-  - <a href="./web1_html_internet-master/07">06. Package Manager</a>
+  - <a href="./web1_html_internet-master/07">07. Package Manager</a>
     - pm2
     - 에러 해결
     - 설치, 시작, 모니터링 등등
@@ -35,5 +35,6 @@
       - url에 보이게 vs 보이지 않게
       - method="post"
     - placeholder=""
-
+  - <a href="./web1_html_internet-master/09">08. Post방식으로 전송된 data 받기</a>
+    - 
 
