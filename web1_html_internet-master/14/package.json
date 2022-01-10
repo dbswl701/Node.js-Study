@@ -1,0 +1,17 @@
+{
+  "name": "14",
+  "version": "1.0.0",
+  "description": "만든 어플리케이션은 어떤 보안적인 요소를 가지고 있는가?",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sanitize-html": "^2.6.1"
+  }
+}
