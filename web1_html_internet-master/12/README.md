@@ -1,3 +1,7 @@
+[obejct vs array(배열)](#객체(Object))
+[객체지향 프로그래밍](#객체지향_프로그래밍)
+[코드작성](#코드작성)
+
 ## 객체(Object)
 
 ### obejct vs array(배열)
@@ -152,3 +156,46 @@ o.f2();
 함수가 객체 안에서 사용될 때 함수가 자신이 속해있는 객체를 참조할 수 있는, **this**라고 하는 약속된 keyword를 만들어내었다.
 
 객체 = 서로 연관된 데이터와 그 데이터를 처리하는 방법인 함수를 그룹핑해서 코드의 복잡성을 낮추는 코드의 수납상자
+
+---
+## 코드작성
+지금까지 작성한 코드를 보면
+```js
+function templateHTML(title, list, body, control){};
+function templateList(filelist){};
+```
+와 같이 **template**라는 접두사가 붙는다. 
+함수나 변수의 이름을 정할 때 접두사, 접미사를 쓰는 이유는 서로 성격이 같은 것들을 그룹핑하기 위해 이름 사용.
+이름보다도 객체를 통해서 이를 정리정돈 할 수 있다면 훨씬 더 좋을것!
+
+
+프로퍼티 = 객체에 있는 값 하나하나
+
+```js
+var template = {
+  html: function(){}
+}, list: function(){}
+```
+html과 list라고 하는 함수를 가지고 있는 하나의 객체를 만들었고 그 객체의 이름을 template이라고 지어주었다.
+
+```js
+/*
+var list = templateList(filelist);
+var template = templateHTML(title, list, 
+  `<h2>${title}</h2>${description}`,
+  `<a href="/create">create</a>`
+);
+response.writeHead(200);
+response.end(template);
+*/
+
+var list = template.list(filelist);
+var html = template.HTML(title, list, 
+  `<h2>${title}</h2>${description}`,
+  `<a href="/create">create</a>`
+);
+response.writeHead(200);
+response.end(html);
+```
+
+리펙토링(refactoring) : 동작방법은 똑같이 유지하면서 내부의 코드를 더욱 효율적으로 바꾸는 행위
